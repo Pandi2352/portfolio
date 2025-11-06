@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 214 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 214 100% 60%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 220 100% 55%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 214 100% 50%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    
+    /* Professional Portfolio Colors */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 50%), hsl(214 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 100% 55%), hsl(214 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 50% / 0.1), hsl(220 100% 55% / 0.1));
+    --shadow-elegant: 0 10px 30px -10px hsl(214 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(214 100% 60% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217.2 32.6% 17.5%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 214 100% 60%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-glow: 214 100% 70%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 220 100% 65%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 214 100% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 60%), hsl(214 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 100% 65%), hsl(214 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 60% / 0.1), hsl(220 100% 65% / 0.1));
+    --shadow-elegant: 0 10px 30px -10px hsl(214 100% 60% / 0.4);
+    --shadow-glow: 0 0 40px hsl(214 100% 70% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Custom opacity levels for background images */
+  .opacity-3 {
+    opacity: 0.03;
+  }
+  
+  .opacity-4 {
+    opacity: 0.04;
+  }
+  
+  .opacity-5 {
+    opacity: 0.05;
+  }
+  
+  /* 3D Card Flip Animations */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
